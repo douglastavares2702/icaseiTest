@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.4 on win32)" generated="2024-07-01T12:50:06.758926" rpa="false" schemaversion="5">
+<suite id="s1" name="enviarDepoimentos" source="c:\Users\datg2\icasei\enviarDepoimentos.robot">
+<test id="s1-t1" name="Enviar depoimentos" line="18">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-01T12:50:07.168674" level="INFO">Opening browser 'chrome' to base url 'https://teste-qa.icasei.com.br/depoimentos'.</msg>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-01T12:50:07.168674" elapsed="8.391408"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-01T12:50:15.575247" elapsed="0.154531"/>
+</kw>
+<kw name="Double Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-01T12:50:15.748732" level="INFO">Double clicking element '//span[@class='sc-5188c1bd-0 iATNDF'][contains(.,'Enviar depoimento')]'.</msg>
+<arg>locator=${EnviarDocumentos}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-01T12:50:15.748732" elapsed="0.749967"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${Pagina}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-01T12:50:16.503171" elapsed="0.300159"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-01T12:50:16.803330" level="INFO">Clicking element '//select[contains(@name,'avalie')]'.</msg>
+<arg>locator=${Avaliar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-01T12:50:16.803330" elapsed="0.358859"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-01T12:50:17.169934" level="INFO">Clicking element '//option[@value='5'][contains(.,'5 estrelas')]'.</msg>
+<arg>locator=${5estrelas}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-01T12:50:17.168933" elapsed="0.204159"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-01T12:50:17.380718" level="INFO">Typing text 'datg2702@hotmail.com' into text field '{email}'.</msg>
+<msg time="2024-07-01T12:50:17.619575" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-07-01T12:50:17.621574" level="FAIL">Element with locator '{email}' not found.</msg>
+<arg>locator={email}</arg>
+<arg>text=datg2702@hotmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2024-07-01T12:50:17.379727" elapsed="0.258366">Element with locator '{email}' not found.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>locator={texto}</arg>
+<arg>text=Não é possível enviar o depoimento</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-07-01T12:50:17.640092" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-07-01T12:50:07.168674" elapsed="10.477418">Element with locator '{email}' not found.</status>
+</test>
+<doc>Desafio Icasei</doc>
+<status status="FAIL" start="2024-07-01T12:50:06.767371" elapsed="10.895553"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="enviarDepoimentos">enviarDepoimentos</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

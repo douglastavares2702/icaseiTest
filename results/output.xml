@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.4 on win32)" generated="2024-07-01T15:40:14.369252" rpa="false" schemaversion="5">
+<suite id="s1" name="enviarDepoimentos" source="C:\Users\datg2\icasei\enviarDepoimentos.robot">
+<test id="s1-t1" name="Abrir o Browser" line="22">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-01T15:40:14.719459" level="INFO">Opening browser 'chrome' to base url 'https://teste-qa.icasei.com.br/depoimentos'.</msg>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-01T15:40:14.719459" elapsed="6.098924"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-01T15:40:20.830344" elapsed="2.971691"/>
+</kw>
+<status status="PASS" start="2024-07-01T15:40:14.719459" elapsed="9.142021"/>
+</test>
+<test id="s1-t2" name="Validar acesso à Pagina" line="26">
+<kw name="Double Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-01T15:40:24.017690" level="INFO">Double clicking element '//span[@class='sc-5188c1bd-0 iATNDF'][contains(.,'Enviar depoimento')]'.</msg>
+<arg>locator=${EnviarDocumentos}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-01T15:40:24.002008" elapsed="0.563516"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>locator=${Pagina}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-01T15:40:24.565524" elapsed="0.026213"/>
+</kw>
+<status status="PASS" start="2024-07-01T15:40:23.986369" elapsed="0.605368"/>
+</test>
+<test id="s1-t3" name="Selecionar a avaliação" line="30">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-01T15:40:24.594153" level="INFO">Clicking element '//select[contains(@name,'avalie')]'.</msg>
+<arg>locator=${Avaliar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-01T15:40:24.594153" elapsed="0.259634"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-01T15:40:24.854812" level="INFO">Clicking element '//option[@value='5'][contains(.,'5 estrelas')]'.</msg>
+<arg>locator=${5estrelas}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-01T15:40:24.854812" elapsed="0.096651"/>
+</kw>
+<status status="PASS" start="2024-07-01T15:40:24.592736" elapsed="0.358727"/>
+</test>
+<test id="s1-t4" name="Clicar no campo E-mail cadastrado" line="34">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-01T15:40:24.970766" level="INFO">Clicking element '//label[@for='email'][contains(.,'E-mail cadastrado no iCasei')]'.</msg>
+<arg>locator=${emailCadastrado}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-01T15:40:24.970766" elapsed="0.149881"/>
+</kw>
+<status status="PASS" start="2024-07-01T15:40:24.951463" elapsed="0.169184"/>
+</test>
+<test id="s1-t5" name="Inserir e-mail" line="37">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-01T15:40:25.123408" level="INFO">Typing text 'datg2702@hotmail.com' into text field '//input[contains(@name,'email')]'.</msg>
+<arg>locator=${email}</arg>
+<arg>text=datg2702@hotmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-01T15:40:25.123408" elapsed="0.189745"/>
+</kw>
+<status status="PASS" start="2024-07-01T15:40:25.123011" elapsed="0.190142"/>
+</test>
+<test id="s1-t6" name="Clicar em experiência" line="40">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-01T15:40:25.313792" level="INFO">Clicking element '//label[@for='depoimento'][contains(.,'Conte como foi sua experiência')]'.</msg>
+<arg>locator=${ClickExperiencia}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-01T15:40:25.313792" elapsed="0.093510"/>
+</kw>
+<status status="PASS" start="2024-07-01T15:40:25.313792" elapsed="0.093510"/>
+</test>
+<test id="s1-t7" name="Inserir depoimento" line="43">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-01T15:40:25.418319" level="INFO">Typing text 'Não é possível enviar o depoimento' into text field '//textarea[contains(@class,'sc-a351ce4a-0 bUGjte')]'.</msg>
+<arg>locator=${texto}</arg>
+<arg>text=Não é possível enviar o depoimento</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-01T15:40:25.418319" elapsed="0.282966"/>
+</kw>
+<status status="PASS" start="2024-07-01T15:40:25.407302" elapsed="0.294875"/>
+</test>
+<test id="s1-t8" name="Click no chek autorizo" line="46">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-01T15:40:25.702177" level="INFO">Clicking element '//span[contains(@class,'sc-822edd55-0 Rwmip')]'.</msg>
+<arg>locator=${check}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-01T15:40:25.702177" elapsed="0.056430"/>
+</kw>
+<status status="PASS" start="2024-07-01T15:40:25.702177" elapsed="0.056430"/>
+</test>
+<test id="s1-t9" name="Clicar em enviar" line="49">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-01T15:40:25.758607" level="INFO">Clicking element '//button[@type='submit']'.</msg>
+<arg>locator=${enviar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-01T15:40:25.758607" elapsed="0.104638"/>
+</kw>
+<status status="PASS" start="2024-07-01T15:40:25.758607" elapsed="0.104638"/>
+</test>
+<doc>Desafio Icasei</doc>
+<status status="PASS" start="2024-07-01T15:40:14.387475" elapsed="11.478570"/>
+</suite>
+<statistics>
+<total>
+<stat pass="9" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="9" fail="0" skip="0" id="s1" name="enviarDepoimentos">enviarDepoimentos</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
